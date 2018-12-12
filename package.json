@@ -1,0 +1,43 @@
+{
+  "name": "blur-slider",
+  "version": "1.0.0",
+  "description": "blur effect",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dodoroy/blur-viewer.git"
+  },
+  "keywords": [
+    "blur"
+  ],
+  "author": "Effy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dodoroy/blur-viewer/issues"
+  },
+  "homepage": "https://github.com/dodoroy/blur-viewer#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "eslint": "^5.10.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^1.0.0",
+    "jquery": "^3.3.1"
+  }
+}

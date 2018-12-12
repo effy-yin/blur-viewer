@@ -1,1 +1,1 @@
-# blur-slider
+# blur-viewer
