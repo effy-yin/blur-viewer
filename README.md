@@ -5,11 +5,11 @@ view the blurred image with mouse move
 
 ## Usage
 1. include the script
-```
+```html
 <script type="text/javascript" src="blur-viewer.js"></script>
 ```
 2. add wrapper and svg template in html with id 'blur-template'
-```
+```html
   <div class="blur-wrapper"><img class="blur-image" src="./images/pic1.jpg" alt=""></div>
   
   <script type="text/template" id="blur-template">
@@ -29,7 +29,7 @@ view the blurred image with mouse move
   </script>
 ```
 3. call BlurViewer with new
-```
+```JavaScript
 let blurElements = document.querySelector('.blur-wrapper');
 blurElement.blurViewer = new dodoroy.BlurViewer(blurElement);
 ```
