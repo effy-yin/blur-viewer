@@ -1,8 +1,8 @@
 {
-  "name": "blur-slider",
+  "name": "@dodoroy/blur-viewer",
   "version": "1.0.0",
   "description": "blur effect",
-  "main": "index.js",
+  "main": "./src/blur-viewer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
@@ -13,7 +13,7 @@
     "url": "git+https://github.com/dodoroy/blur-viewer.git"
   },
   "keywords": [
-    "blur"
+    "image blur"
   ],
   "author": "Effy",
   "license": "ISC",
