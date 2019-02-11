@@ -1,8 +1,8 @@
 {
   "name": "@dodoroy/blur-viewer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "blur effect",
-  "main": "./src/blur-viewer.js",
+  "main": "./dist/blur-viewer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
