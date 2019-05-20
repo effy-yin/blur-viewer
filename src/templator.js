@@ -14,7 +14,7 @@ export class Templator {
       let keys = keysString.split('.')
       let value = data
 
-      // alert(keys.length)
+      // console.log(keys.length)
 
       for (let i = 0; i < keys.length; i++) {
         if (value.hasOwnProperty(keys[i])) {
@@ -22,10 +22,10 @@ export class Templator {
         } else {
           value = ''
           break
-        };
-      };
+        }
+      }
 
       return value
     })
   }
-};
+}

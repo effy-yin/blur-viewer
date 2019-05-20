@@ -1,5 +1,6 @@
 import { Templator } from './templator.js'
 import $ from 'jquery'
+import './blur-viewer.scss'
 
 export class BlurViewer {
   constructor (wrapper) {

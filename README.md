@@ -30,7 +30,9 @@ view the blurred image with mouse move
     height: 100%;
   }
 ```
+
 2. add wrapper and svg template in html with id 'blur-template'
+
 ```html
   <div class="blur-wrapper"><img class="blur-image" src="./images/pic1.jpg" alt=""></div>
 
@@ -50,7 +52,9 @@ view the blurred image with mouse move
     </svg>
   </script>
 ```
+
 3. call BlurViewer with new
+
 ```JavaScript
 let blurElements = document.querySelectorAll('.blur-wrapper');
 
