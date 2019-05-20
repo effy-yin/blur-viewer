@@ -1,4 +1,5 @@
-# blur-viewer
+# Blur Viewer
+
 ## About
 view the blurred image with mouse move
 ![screen](https://raw.githubusercontent.com/dodoroy/blur-viewer/master/example/demo.png)
