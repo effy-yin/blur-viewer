@@ -2,7 +2,6 @@
 
 ## About
 image blur effect using svg filter
-
 view the blurred image with mouse move
 ![screen](https://raw.githubusercontent.com/dodoroy/blur-viewer/master/example/demo.png)
 
