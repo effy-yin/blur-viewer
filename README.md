@@ -2,37 +2,20 @@
 
 ## About
 image blur effect using svg filter
+
 view the blurred image with mouse move
-![screen](https://raw.githubusercontent.com/dodoroy/blur-viewer/master/example/demo.png)
+
+![screen](https://raw.githubusercontent.com/dodoroy/blur-viewer/master/example/demo.gif)
 
 ## Usage
-1. include the script and css
+1. include the css and script
 ```html
-<script type="text/javascript" src="blur-viewer.js"></script>
-```
-```css
-  .blur-wrapper {
-    position: relative;
-    width: 1000px;
-  }
-  .blur-wrapper .blur-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    visibility: hidden;
-    z-index: -1;
-  }
-  .blur-wrapper .blur {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+<link type="text/css" rel="stylesheet" href="../dist/blur-viewer.css">
+
+<script type="text/javascript" src="../dist/blur-viewer.js"></script>
 ```
 
-2. add wrapper and svg template in html with id 'blur-template'
+2. add image wrapper and svg template in html with id 'blur-template'
 
 ```html
   <div class="blur-wrapper"><img class="blur-image" src="./images/pic1.jpg" alt=""></div>
