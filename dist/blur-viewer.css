@@ -1,0 +1,24 @@
+.blur-wrapper {
+  position: relative;
+  width: 1000px;
+  /* /  background: yellow; */ }
+  .blur-wrapper .blur-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1; }
+  .blur-wrapper .blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* top: -1%;
+        left: -1%;
+        width: 102%;
+        height: 102%; */ }
+
+
+/*# sourceMappingURL=blur-viewer.css.map*/

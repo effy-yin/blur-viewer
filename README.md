@@ -14,7 +14,6 @@ view the blurred image with mouse move
   .blur-wrapper {
     position: relative;
     width: 1000px;
-    /* background: yellow; */
   }
   .blur-wrapper .blur-image {
     display: block;

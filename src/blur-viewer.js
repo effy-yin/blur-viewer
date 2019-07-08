@@ -1,61 +1,63 @@
-import { Templator } from './templator.js'
-import $ from 'jquery'
-import './blur-viewer.scss'
+import Templator from './templator.js';
+import $ from 'jquery';
+import './blur-viewer.scss';
 
 export class BlurViewer {
-  constructor (wrapper) {
-    this.id = this.generateID('blur-viewer-')
-    this.$wrapper = $(wrapper)
-    this.blurTemplate = null
-    this.init()
-  }
+    constructor (wrapper) {
+        this.id = this.generateID('blur-viewer-');
+        this.$wrapper = $(wrapper);
+        this.blurTemplate = null;
+        this.init();
+    }
 
-  init () {
-    this.blurTemplate = new Templator(document.getElementById('blur-template').innerHTML)
+    init () {
+        this.blurTemplate = new Templator(document.getElementById('blur-template').innerHTML);
 
-    $(window).on('load', () => {
-      this.addBlur()
-    })
+        $(window).on('load', () => {
+            this.addBlur();
+        });
 
-    this.bind()
-  }
+        this.bind();
+    }
 
-  addBlur () {
-    this.$wrapper.find('.blur').empty().remove()
+    addBlur () {
+        // this.$wrapper.find('.blur').empty().remove();
 
-    let svgStr = this.blurTemplate.compile({
-      image: this.$wrapper.find('.blur-image').attr('src'),
-      filter: this.generateID('filter-'),
-      mask: this.generateID('mask-')
-    })
-    console.log(svgStr)
-    this.$wrapper.append(svgStr)
-  }
+        let svgStr = this.blurTemplate.compile({
+            image: this.$wrapper.find('.blur-image').attr('src'),
+            filter: this.generateID('filter-'),
+            mask: this.generateID('mask-')
+        });
+        console.log(svgStr);
 
-  updateCirclePosition (event) {
-    let posX = event.offsetX
-    let posY = event.offsetY
 
-    let circle = this.$wrapper.find('.mask circle').get(0)
-    circle.setAttribute('cy', ((posY) + 'px'))
-    circle.setAttribute('cx', ((posX) + 'px'))
-  }
+        this.$wrapper.append(svgStr);
+    }
 
-  bind () {
-    this.$wrapper.on('mousemove', (event) => {
-      this.updateCirclePosition(event)
-    })
-  }
+    updateCirclePosition (event) {
+        let posX = event.offsetX;
+        let posY = event.offsetY;
 
-  unbind () {
-    this.$wrapper.off('mousemove')
-  }
+        let circle = this.$wrapper.find('.mask circle').get(0);
+        circle.setAttribute('cy', ((posY) + 'px'));
+        circle.setAttribute('cx', ((posX) + 'px'));
+    }
 
-  destroy () {
-    this.unbind()
-  }
+    bind () {
+        this.$wrapper.on('mousemove', (event) => {
+            this.updateCirclePosition(event);
+        });
+    }
 
-  generateID (prefix) {
-    return (prefix || '') + new Date().getTime()
-  }
+    unbind () {
+        this.$wrapper.off('mousemove');
+    }
+
+    destroy () {
+        this.unbind();
+    }
+
+    generateID (prefix) {
+        return (prefix || '') + new Date().getTime();
+    }
 }
